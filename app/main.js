@@ -25,4 +25,4 @@ async function start(conn){
   	await writeProfile.write(orgMeta);
 };
 
-start();
+module.exports = { start };

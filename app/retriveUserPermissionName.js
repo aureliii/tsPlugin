@@ -7,7 +7,7 @@ let permissionName = [];
 
 async function getNames(conn) {
 
-    await conn.login(creds.username, creds.password);
+
 
     await conn.sobject("UserPermissionAccess").describe(function(err, metadata){
         if(err){ return console.error(err); }

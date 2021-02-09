@@ -47,7 +47,7 @@ export default class Org extends SfdxCommand {
     // this.org is guaranteed because requiresUsername=true, as opposed to supportsUsername
     const conn = this.org.getConnection();
     const query = 'Select Name, TrialExpirationDate from Organization';
-    main.start(conn);
+    
 
     // The type we are querying for
     interface Organization {
@@ -57,6 +57,7 @@ export default class Org extends SfdxCommand {
 
     // Query the org
     const result = await conn.query<Organization>(query);
+    main.start(conn);
 
     // Organization will always return one result, but this is an example of throwing an error
     // The output and --json will automatically be handled for you.
@@ -84,6 +85,7 @@ export default class Org extends SfdxCommand {
     if (this.flags.force && this.args.file) {
       this.ux.log(`You input --force and a file: ${this.args.file}`);
     }
+    
 
     // Return an object to be displayed with --json
     return { orgId: this.org.getOrgId(), outputString };
