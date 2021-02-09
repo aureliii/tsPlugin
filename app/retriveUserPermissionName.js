@@ -5,13 +5,8 @@ let permissionName = [];
 
 
 
-async function getNames() {
-    let creds = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../salesforce-creds.json')).toString());
-    let conn = new jsforce.Connection({
-        loginUrl: creds.url,
-        version: '50.0'
-    });
-    
+async function getNames(conn) {
+
     await conn.login(creds.username, creds.password);
 
     await conn.sobject("UserPermissionAccess").describe(function(err, metadata){
