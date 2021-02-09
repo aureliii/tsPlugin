@@ -11,7 +11,7 @@ const writeProfile = require("./writeProfile");
 console.log('ciao main');
 
 async function start(conn){
-  	const standardProfiles = await retrieveStandardProfile.getStandardProfile(conn);
+ // 	const standardProfiles = await retrieveStandardProfile.getStandardProfile(conn);
     const objsName = await retriveObjName.getObjsName(conn);
 
     const userPermissionsName = await retriveUsrPerms.getNames(conn);
