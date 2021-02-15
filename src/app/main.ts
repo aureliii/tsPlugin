@@ -13,7 +13,7 @@ console.log('ciao main');
 export default class MetadataFiles {}
 */
 export default class main {
-   public static async  start(conn){
+   public static   start(conn){
     console.log('sono nel main');
    // 	const standardProfiles = await retrieveStandardProfile.getStandardProfile(conn);
     /*  const objsName = await retriveObjName.getObjsName(conn);
