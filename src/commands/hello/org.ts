@@ -1,7 +1,8 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { Messages, SfdxError } from '@salesforce/core';
 import { AnyJson } from '@salesforce/ts-types';
-const main = require("../../../app/main");
+import  main  from "../../app/main";
+//const main = require("../../../app/main");
 
 // Initialize Messages with the current plugin directory
 Messages.importMessagesDirectory(__dirname);
