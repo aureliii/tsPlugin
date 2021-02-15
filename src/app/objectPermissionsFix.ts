@@ -1,4 +1,5 @@
-async function fix(meta,objects){
+
+export async function fix(meta,objects){
     try {
     	const objectNames = [];
         for(const k of meta.keys()){ 
@@ -44,4 +45,4 @@ async function fix(meta,objects){
     }
 }
 
-module.exports = { fix };
+//module.exports = { fix };
